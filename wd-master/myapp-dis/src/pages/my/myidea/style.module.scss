@@ -1,0 +1,105 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    height: 100%;
+}
+.top{
+    width: 100%;
+    height: 60px;
+     border-bottom: 10px solid #f2f2f2;
+    img{
+        width: 16px;
+        height: 16px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    span{
+        padding-left:118px;
+    }
+}
+.headMain {
+  margin-top: 20px;
+}
+
+.headMain .headMainn {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 333px;
+  height: 98px;
+  display: flex;
+  border-radius: 4px;
+  margin-right: 20px;
+  border: 1px solid transparent; /* 需要先将边框设为透明 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 模糊半径为10px，颜色为黑色，不透明度为50% */
+}
+.headMain .headMainn .left img {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 65px;
+  height: 78px;
+}
+.headMain .headMainn .right {
+  margin-left: 10px;
+}
+.headRight {
+  display: flex;
+}
+.headRight div {
+  font-weight: bold;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #333;
+}
+.headRight span {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 10px;
+  margin-left: 20px;
+  color: #333;
+}
+.headRightt {
+  color: #333;
+  font-size: 10px;
+  margin-top: 14px;
+}
+.headLeft {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #333;
+  display: flex;
+}
+.headLeft span {
+  margin-left: 20px;
+}
+
+.demo-swipe-cell {
+  user-select: none;
+//   button{
+//     margin-top: 20px;
+//   }
+}
+
+.demo-product-card {
+  padding: 10px 16px;
+  background-color: #fff;
+
+  &__img {
+    width: 88px;
+    height: 88px;
+    margin-right: 10px;
+  }
+
+  &__content {
+    flex: 1;
+  }
+}
+.SwipeCell{
+    .Button{
+        margin-top: 20px;
+    }
+}

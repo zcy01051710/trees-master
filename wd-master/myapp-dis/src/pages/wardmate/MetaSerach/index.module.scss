@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.form{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+.input{
+    flex-grow: 1;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    height: 30px;
+    outline: none;
+    margin: 0 10px; 
+    text-indent: 1em;
+}
+.history{
+    padding-left: 10px;
+    padding-top: 10px;
+    color: skyblue;
+}
+.historyList{
+    padding-left: 20px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.list{
+    margin-top: 20px;
+    border-top: 5px solid #ccc;
+    height: 180px;
+}
+.h3{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.span{
+    color: #ccc;
+    font-size: 10px;
+    padding-left: 10px;
+}
+.word{
+    color: #ccc;
+    padding-left: 10px;
+    font-size: 12px;
+    padding-top: 10px;
+}
+.word1{
+    text-align: right;
+    padding-right: 50px;
+    padding-top: 60px;
+}
+.historydetele{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.handledetele{
+    border: 0;
+    background-color: #fff;
+    color: red;
+}

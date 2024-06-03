@@ -1,0 +1,50 @@
+.top{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 30px;
+    img{
+        width: 16px;
+        height: 16px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    span{
+        padding-left:118px;
+    }
+}
+.add {
+  width: 100px;
+  height: 100px;
+  margin-top: 8px;
+}
+.addP p {
+  color: skyblue;
+}
+.imgadd {
+  width: 100vw;
+  height: 37px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 37px;
+  margin-top: 5px;
+}
+
+.addP {
+  padding: 0 10px;
+}
+
+.a {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addBtn {
+  width: 180px;
+  height: 34px;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  background: #3087ea;
+}

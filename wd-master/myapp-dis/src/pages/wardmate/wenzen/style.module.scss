@@ -1,0 +1,81 @@
+.doctorList {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .header {
+    height: 60px;
+  }
+  .conditionList {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    font-weight: bold;
+    .active {
+      color: red;
+      border-bottom: 3px solid red;
+    }
+  }
+  .concent {
+    flex: 1;
+    padding: 0 50px;
+    .fristadd {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      line-height: 20px;
+      padding-top: 5px;
+      padding-left: 20px;
+      padding-right: 20px;
+      div {
+        .div {
+          display: flex;
+          span {
+            padding-left: 50px;
+          }
+        }
+        p {
+          span:nth-child(2) {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .twoadd{
+        display: flex;
+        p{
+            width: 70%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            &:nth-child(1){
+                background-color: white;
+            }
+            &:nth-child(2){
+                width: 30%;
+                background-color: #3087ea;
+            }
+        }
+    }
+  }
+  .page {
+    display: flex;
+    align-items: center;
+    .swiper {
+      display: flex;
+      justify-content: center;
+      .dl {
+        text-align: center;
+        padding: 3px;
+        .dd {
+          background-color: #999999;
+          color: white;
+          &.active {
+            background-color: #3087ea;
+          }
+        }
+      }
+    }
+  }
+}

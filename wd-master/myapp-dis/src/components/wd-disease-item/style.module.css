@@ -1,0 +1,20 @@
+.item {
+  padding: 40px;
+  border-bottom: 3px solid #ccc;
+}
+
+.item .releaseTime {
+  margin-top: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.item .btm {
+  display: flex;
+  justify-content: end;
+  font-size: 12px;
+}
+
+.item .btm .span {
+  margin-right: 20px;
+}

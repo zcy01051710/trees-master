@@ -1,0 +1,79 @@
+.know {
+  .tabs {
+    margin-top: 6px;
+
+    &.active {
+      color: var(--primary-color);
+    }
+
+    .content {
+      display: flex;
+      margin-top: 4px;
+
+      .left {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        margin-top: 16px;
+  
+        .left-span {
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            font-size: 14px;
+            width: 100%;
+            text-align: center;
+          }
+
+          &.active {
+            background-color: white;
+
+            span {
+              border-left: 4px red solid;
+            }
+          }
+        }
+      }
+
+      .right {
+        background-color: white;
+        flex: 1;
+
+
+        .ul1 {
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 16px;
+          overflow-y: scroll;
+
+          span {
+            color: #000;
+            font-size: 14px;
+          }
+
+          .li1 {
+            width: 100%;
+            margin-top: 30px;
+            color: #000;
+          }
+
+          .li2 {
+            width: 50%;
+            margin-top: 30px;
+            color: #000;
+          }
+        }
+
+        .ul2 {
+          li {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

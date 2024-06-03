@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: -50px;
+  height: 100px;
+  border-bottom: 4px solid #ccc;
+}
+
+.yue {
+  margin-top: 20px;
+}
+
+.quan {
+  border-left: 3px solid skyblue;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.list {
+  margin-top: 20px;
+  border-top: 5px solid #ccc;
+  height: 180px;
+}
+
+.h3 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.span {
+  color: #ccc;
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+.word {
+  color: #ccc;
+  padding-left: 10px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.word1 {
+  text-align: right;
+  padding-right: 50px;
+  padding-top: 60px;
+}

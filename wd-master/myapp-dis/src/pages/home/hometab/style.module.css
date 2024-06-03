@@ -1,0 +1,74 @@
+.know .tabs {
+  margin-top: 6px;
+}
+
+.know .tabs.active {
+  color: var(--primary-color);
+}
+
+.know .tabs .content {
+  display: flex;
+  margin-top: 4px;
+}
+
+.know .tabs .content .left {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-top: 16px;
+}
+
+.know .tabs .content .left .left-span {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.know .tabs .content .left .left-span span {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+}
+
+.know .tabs .content .left .left-span.active {
+  background-color: white;
+}
+
+.know .tabs .content .left .left-span.active span {
+  border-left: 4px red solid;
+}
+
+.know .tabs .content .right {
+  background-color: white;
+  flex: 1;
+}
+
+.know .tabs .content .right .ul1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 16px;
+  overflow-y: scroll;
+}
+
+.know .tabs .content .right .ul1 span {
+  color: #000;
+  font-size: 14px;
+}
+
+.know .tabs .content .right .ul1 .li1 {
+  width: 100%;
+  margin-top: 30px;
+  color: #000;
+}
+
+.know .tabs .content .right .ul1 .li2 {
+  width: 50%;
+  margin-top: 30px;
+  color: #000;
+}
+
+.know .tabs .content .right .ul2 li {
+  margin-top: 20px;
+}

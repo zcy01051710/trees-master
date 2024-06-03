@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.center {
+  width: 100vw;
+  height: 50px;
+  border-top: 5px solid #ccc;
+}
+
+.postion {
+  position: absolute;
+  right: 1%;
+  top: 10%;
+}
+
+.Tabs {
+  display: flex;
+  position: relative;
+}
+
+.bottom {
+  width: 100vw;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.pos {
+  position: absolute;
+  left: 45%;
+  top: -25%;
+}
+
+.title {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 89vw;
+  overflow-x: scroll;
+  height: 50px;
+  align-items: center;
+}
+
+.title::-webkit-scrollbar {
+  display: none;
+}
+
+.title .span {
+  margin: 0 20px;
+  flex-shrink: 0;
+}
+
+.title .span.active {
+  color: red;
+}

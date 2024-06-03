@@ -1,0 +1,40 @@
+@charset "UTF-8";
+.one {
+  width: 100%;
+  height: 667px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.danmaku {
+  position: absolute;
+  white-space: nowrap;
+  /*防止文字教行 */
+  width: 30%;
+  color: #fff;
+  top: 20px;
+  left: 2%;
+  animation: scrollText 10s linear infinite;
+  /* 控制滚动速度和循环 */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  /* 初始位置 */
+  100% {
+    transform: translateX(-100%);
+  }
+  /* 滚动到最左边 */
+}
+
+.scrolling {
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.demo-swiper {
+  width: 100%;
+  height: 100vh;
+}

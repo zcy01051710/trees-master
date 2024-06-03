@@ -1,0 +1,18 @@
+.item {
+  padding: 40px;
+  .releaseTime {
+    margin-top: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .btm {
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    .span {
+      margin-right: 20px;
+     
+    }
+  }
+  border-bottom: 3px solid #ccc;
+}

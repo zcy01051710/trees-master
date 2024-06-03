@@ -1,0 +1,153 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    height: 100%;
+}
+.top{
+    width: 100%;
+    height: 60px;
+    border-bottom: 3px solid #f2f2f2;
+    img{
+        width: 16px;
+        height: 16px;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    span{
+        padding-left:105px;
+    }
+}
+.Tabs{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #f2f2f2;
+}
+// .headMain {
+//   border-top: 10px solid #f2f2f2;
+// }
+.lists{
+    width: 100%;
+    height: 100%;
+}
+.list{
+    width: 320px;
+    height: 100px;
+    margin-left: 24px;
+    margin-top: 10px;
+}
+dl{
+    width: 100%;
+    height: 100px;
+    display: flex;
+   padding-top: 10px;
+    dt{
+        img{
+            width:100px;
+            height: 80px;
+            margin-right: 10px;
+        }
+    }    
+    dd{
+     font-size: 15px;
+    }
+    .one{
+        font-size: 10px;
+        margin-top: 30px;
+        span{
+            padding-left: 60px;
+        }
+    }
+}
+.looks{
+    width: 375px;
+    height: 100%;
+    .look{
+    width: 375px;
+    height: 20px;
+    position: absolute;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 700;
+   }
+
+}
+
+.title{
+    width: 375px;
+    height: 30px;
+    font-size:10px;
+    color:#333333;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.text{
+    margin-left: 100px;
+}
+span{
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.con{
+    width: 375px;
+    height: 200px;
+    border-bottom: 2px solid #f2f2f2;
+}
+.conent{
+    width: 100%;
+    height: 100%;
+}
+h4{
+    font-size: 16px;
+    color: #333333;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 14px;
+}
+.word{
+ margin-left: 20px;
+ margin-right: 20px;
+ font-size:12px;
+ color: #333333;
+ line-height: 20px;
+}
+.desc{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    dl{
+        display: flex;
+        margin-top: 16px;
+        margin-left: 20px;
+        dt{
+            font-size: 10px;
+            color: #333333;
+            margin-right: 6px;
+        }
+        dd{
+            font-size: 10px;
+            color: #333333;
+        }
+    }
+    .one{
+        display: flex;
+        margin-top: 16px;
+        margin-left: -100px;
+        dt{
+            font-size: 10px;
+            color: #333333;
+            margin-right: 6px;
+        }
+        dd{
+            font-size: 10px;
+            color: #333333;
+        }
+    }
+    .two{
+        padding-left: 30px;
+    }
+}

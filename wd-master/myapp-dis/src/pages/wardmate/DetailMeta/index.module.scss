@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.res{
+    height: 80%;
+}
+.h4{
+    color: skyblue;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+.p{
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 12px;
+    padding-right: 10px;
+}
+.img{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.div{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom{
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+.pos{
+    position: absolute;
+    left: 45%;
+    top: -25%;
+}
+.ping{
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+     width: 300px;
+}
+.pul{
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+.jian{
+    border-left: 3px solid skyblue;
+    font-size: 12px;
+    margin-left: 10px;
+    padding-left: 5px;
+    margin-top: 10px;
+}
+.you{
+    display: flex;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.yong{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.tou{
+    display: flex;
+    align-items: center;
+}
+.divliang{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.pingleun{
+    margin-top: 20px;
+}
+.fromlist{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+.imageuu{
+    margin-top: 30px;
+}
+.imagett{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.collect{
+   
+    display: flex;
+    margin-right: 10px;
+    li{
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}

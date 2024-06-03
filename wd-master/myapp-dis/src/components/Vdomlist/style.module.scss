@@ -1,0 +1,17 @@
+
+.context {
+    width: 100vw;
+    .aa {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .con {
+            height: 100%;
+        }
+
+        .img {
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 100%;
+    height: 650px;
+    background-color: #f2f2f2;
+}
+.top{
+    width: 100%;
+    height: 55px;
+    background-color: #fff;
+    position: relative;
+}
+.top img{
+    width: 17px;
+    height: 17px;
+    margin-left: 20px;
+    margin-top: 18px;
+    
+}
+.top p{
+    position: absolute;
+    left: 41%;
+    top: 25%
+}
+.center{
+    width: 100%;
+    height: 600px;
+    margin-top: 10px;
+
+    background-color: #fff;
+}
+.left{
+    width: 100px;  
+    height: 600px;
+    float: left;
+    position: relative;
+}
+.sl p{
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    font-weight: 500;
+}
+.sl1 p{
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    font-weight: 500;
+}
+.sl1 .op1{
+    top: 33%;
+    left: 30%;
+    font-size: 12px;
+    color: #ccc;
+}
+.sl2 p{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    font-weight: 500;
+}
+.sl2 .op{
+    position: absolute;
+    left: 30%;
+    top: 53%;
+}
+.sl3 p{
+    position: absolute;
+    left: 15%;
+    top: 70%;
+    font-weight: 500;
+}
+.sl3 .op2{
+    position: absolute;
+    left: 30%;
+    top: 73%;
+}
+.sl4 p{
+    position: absolute;
+    left: 15%;
+    top: 90%;
+    font-weight: 500;
+}
+.sl4 .op3{
+    position: absolute;
+    left: 30%;
+    top: 93%;
+} 
+.left span{
+    position: absolute;
+    top: 13%;
+    left: 30%;
+    font-size: 12px;
+    color: #ccc;
+}
+.cen{
+    width: 35px;
+    height: 530px;
+    margin-top: 40px;
+    border-left: 1px solid #ccc;
+    float: left;
+    position: relative;
+    
+}
+.cen img{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top:-2%;
+    left: -46%;
+}
+.right{
+    width: 195px;
+    height: 600px;
+    float: left;
+    margin-left: 15px;
+}
+.cen .img1{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 27%;
+    left: -13px;
+}
+.cen .img2{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    left: -13px;
+}
+.cen .img3{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 72%;
+    left: -13px;
+}
+.cen .img4{
+position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 96%;
+    left: -13px;
+}
+.bubble .yuan{
+    font-size: 20px;
+    color: red;
+    font-weight: 500;
+    margin-bottom: 20px;
+    top: 15%;
+}
+.bubble .ys{
+    position: absolute;
+    top: 61%;
+    left: 4%;
+    font-size: 14px;
+    color: #3087ea;
+}
+.bubble .dz{
+    position: absolute;
+    font-size: 12px;
+    left: 68%;  
+    top: 15%;
+
+}
+.bubble .js{
+    position: absolute;
+    font-size: 12px;
+    left: 42%;  
+    top:56%; 
+}
+.bubble {
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-top: 37px;
+    width: 221px;
+    height: 80px;
+    text-align: left;
+    }
+    
+    .bubble:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #ccc transparent transparent;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    margin-top: -10px;
+    }

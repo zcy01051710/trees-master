@@ -1,0 +1,128 @@
+.comment-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+.itembox {
+  max-height: calc(100vh - 70px);
+  padding-top: 20px;
+  overflow-y: visible;
+}
+.comment-item {
+  padding: 0 20px;
+  display: flex;
+  margin-bottom: 20px;
+  &:first-child {
+    margin-top: 280px;
+  }
+  .avator {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .comment-content {
+    margin-left: 20px;
+    flex: 1;
+    height: auto;
+    min-height: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 24px 14px 12px;
+    color: #000;
+    position: relative;
+    &::before {
+      position: absolute;
+      left: -20px;
+      content: "";
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right-color: #fff;
+    }
+    .user-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 20px;
+      .docIcon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .comment-text {
+      margin-top: 32px;
+      font-size: 12px;
+      line-height: 32px;
+      width: 100%;
+      white-space: pre-wrap;
+    }
+    .comment-bot {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 36px;
+      align-items: center;
+      .times {
+        font-size: 10px;
+      }
+      .likes {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 36px;
+        div {
+          display: flex;
+          margin-left: 13px;
+          span {
+            margin-left: 6px;
+            font-size: 12px;
+          }
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+.noCommentImg {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+// 底部评论框
+.comment-ipt {
+  position: fixed;
+  bottom: 60px;
+  display: flex;
+  padding: 0 20px;
+  width: 100%;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  input {
+    margin-left: 40px;
+    flex: 1;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #151313;
+    font-size: 14px;
+    color: #fff;
+    text-indent: 2em;
+    &::placeholder {
+      color: #fff;
+    }
+  }
+}

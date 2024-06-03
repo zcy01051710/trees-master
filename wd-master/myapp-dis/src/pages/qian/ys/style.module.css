@@ -1,0 +1,63 @@
+.two {
+  width: 100%;
+  height: 200px;
+  float: left;
+}
+
+dl {
+  display: flex;
+}
+
+dl .yi {
+  width: 180px;
+  height: 90px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+dl .yi p {
+  display: flex;
+}
+
+dl .yi .er1 {
+  width: 50px;
+  height: 85px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 1px;
+}
+
+dl .yi .er1 span {
+  margin-left: 20px;
+}
+
+.tw1 {
+  width: 150px;
+  height: 180px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.ye {
+  width: 100%;
+}
+
+.san {
+  width: 100%;
+}
+
+.si {
+  width: 100%;
+}
+
+.thr {
+  width: 100%;
+}
+
+.gang {
+  margin-left: 20px;
+}
+
+.jian {
+  margin-left: 20px;
+}

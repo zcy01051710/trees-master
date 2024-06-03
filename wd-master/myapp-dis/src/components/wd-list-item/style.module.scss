@@ -1,0 +1,19 @@
+.three {
+  padding: 10px;
+  .images {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.one {
+  padding: 10px;
+  .dl {
+    display: flex;
+  }
+}
+
+.btm {
+  display: flex;
+  justify-content: space-between;
+}
