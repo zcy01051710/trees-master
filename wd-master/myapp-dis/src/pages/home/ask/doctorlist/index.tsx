@@ -1,7 +1,7 @@
 import React from "react";
-import { WDHeader } from "../../../../components/wd-header";
+import { WDHeader } from "../../../../components";
 import { useRequest, useSetState } from "ahooks";
-import { getmenus } from "../../../../api/HomeIndex";
+// import { getDiseaseTitle } from "../../../api/diseaseApi";
 // import { DiseaseTitleState } from "../../disease/index";
 import { Tabs } from "react-vant";
 import { useSearchParams } from "react-router-dom";
@@ -9,7 +9,9 @@ import style from "./style.module.scss";
 import { getDocterList } from "../../../../api/HomeIndex";
 import { Arrow, ArrowLeft } from "@react-vant/icons";
 import { addClassName } from "../../../../utils";
+import { getDiseaseTitle } from "../../../../api/qian";
 import { useNavigate } from "react-router-dom";
+
 interface ParamsState {
   deptId: number;
   condition: number;
@@ -17,7 +19,12 @@ interface ParamsState {
   page: number;
   count: number;
 }
-
+interface DiseaseTitleState {
+  departmentName: string;
+  id: number;
+  pic: string;
+  rank: number;
+}
 interface DocterState {
   badNum: number; // 差评数
   doctorId: number; // 医生id
@@ -29,12 +36,6 @@ interface DocterState {
   praiseNum: number; // 好评数
   serverNum: number; // 服务患者数
   servicePrice: number; // 咨询价格（H币）
-}
-interface DiseaseTitleState {
-  departmentName: string;
-  id: number;
-  pic: string;
-  rank: number;
 }
 // 字典
 const conditionList = [
@@ -57,10 +58,10 @@ const conditionList = [
 ];
 
 const Index: React.FC = () => {
-  const navigate = useNavigate();
+  const navigate=useNavigate()
   // 获取查询参数id
-  const [searchParams] = useSearchParams();
-  const id = +searchParams.get("id")!;
+    const [searchParams] = useSearchParams();
+    const id = +searchParams.get("id")!;
   // 初始化id  发送后端的参数
   const [params, setParams] = useSetState({
     deptId: id,
@@ -70,7 +71,7 @@ const Index: React.FC = () => {
   } as ParamsState);
   // 标题数据
   const { data: tabTitle = [] } = useRequest(async () => {
-    const resp = await getmenus();
+    const resp = await getDiseaseTitle();
     console.log("titleData", resp.result);
     //
     if (params.deptId) {
@@ -86,6 +87,7 @@ const Index: React.FC = () => {
   // 列表数据
   const { data: docterList = [] } = useRequest(
     async () => {
+       if(params.deptId===0) return []
       const resp = await getDocterList(params);
       console.log("doctorList", resp.result);
       setCurrentDocter(resp.result[0]);
@@ -106,6 +108,7 @@ const Index: React.FC = () => {
       <div>
         {tabTitle.length && (
           <Tabs
+          type="jumbo"
             active={params.deptId}
             onClickTab={({ name }) =>
               setParams({
@@ -168,15 +171,48 @@ const Index: React.FC = () => {
           </dd>
         </dl>
       </div>
-      <div className={style.docterList}>
-        {docterList.map((v, i) => (
-          <dl>
-            <dt>
-              <img className={style.image} onClick={()=>navigate(`/ask/doctordetail/${v.doctorId}`)} src={v.imagePic} alt="" />
-            </dt>
-            <dd>{v.doctorName}</dd>
-          </dl>
-        ))}
+      {/* 分页 */}
+      <div className={style.page}>
+        <ArrowLeft
+          onClick={() => setParams({ page: params.page - 1 })}
+          fontSize={40}
+          onPointerEnterCapture={1}
+          onPointerLeaveCapture={1}
+        />
+        <div className={style.swiper}>
+          {docterList.map((v) => {
+            return (
+              <dl
+                key={v.doctorId}
+                className={style.dl}
+                onClick={() => setCurrentDocter(v)}
+              >
+                <dt>
+                  <img onClick={()=>navigate(`/ask/doctordetail/${v.doctorId}`)} src={v.imagePic} alt="" className={style.img} />
+                </dt>
+                <dd
+                  className={
+                    v.doctorId === currentDocter.doctorId
+                      ? addClassName(style.dd, style.active)
+                      : style.dd
+                  }
+                >
+                  {v.doctorName}
+                </dd>
+              </dl>
+            );
+          })}
+        </div>
+        <Arrow
+          onClick={() => setParams({ page: params.page + 1 })}
+          fontSize={40}
+          onPointerEnterCapture={1}
+          onPointerLeaveCapture={1}
+        />
+      </div>
+      {/* 分页位置 */}
+      <div style={{ textAlign: "center", marginBottom: 20 }}>
+        第{params.page}页
       </div>
     </div>
   );

@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.liao {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  header,
+  footer {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+  }
+  footer{
+    height: 50px;
+    background-color: white;
+  }
+  main {
+    flex: 1;
+    height: 100%;
+    overflow-y: scroll;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .list {
+      padding: 20px;
+      
+    }
+  }
+}

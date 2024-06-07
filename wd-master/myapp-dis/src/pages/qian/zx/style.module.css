@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.liao {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.liao header,
+.liao footer {
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+
+.liao footer {
+  height: 50px;
+  background-color: white;
+}
+
+.liao main {
+  flex: 1;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.liao main ::-webkit-scrollbar {
+  display: none;
+}
+
+.liao main .list {
+  padding: 20px;
+}

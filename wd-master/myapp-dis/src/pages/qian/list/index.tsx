@@ -1,9 +1,9 @@
 import React from "react";
 import { WDHeader } from "../../../components";
 import { useRequest, useSetState } from "ahooks";
-import { getDiseaseTitle } from "../../../api/qian";
-import { Tabs } from "react-vant";
-import { useSearchParams } from "react-router-dom";
+import { GetDoctor, getDiseaseTitle, jieshu, zixun } from "../../../api/qian";
+import { Dialog, Tabs } from "react-vant";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import style from './style.module.scss';
 import { getDocterList } from "../../../api/qian";
 import { Arrow, ArrowLeft } from "@react-vant/icons";
@@ -21,7 +21,6 @@ interface ParamsState {
   page: number;
   count: number;
 }
-
 interface DocterState {
   badNum: number; // 差评数
   doctorId: number; // 医生id
@@ -53,6 +52,7 @@ const conditionList = [
     value: 4,
   },
 ];
+
 const Index: React.FC = () => {
   // 获取查询参数id
   const [searchParams] = useSearchParams();
@@ -79,9 +79,43 @@ const Index: React.FC = () => {
     }
     return resp.result as DiseaseTitleState[];
   });
+  const handleAsk = async () => {
+    Dialog.confirm({
+      message: `本次咨询将扣除${currentDocter.servicePrice}H币！`,
+      onCancel: () => console.log("取消"),
+      onConfirm: () => console.log("confirm"),
+    })
+      .then(async() => {
+        const resp = await zixun(currentDocter.doctorId);
+        if (resp.status === "8001") {
+           Dialog.confirm({
+            message: '您尚有咨询在进行中，请先关闭在开始新的咨询',
+           confirmButtonText:'去结束'
+          }).then(async()=>{
+            //获取当前咨询医生
+            const resp1 = await GetDoctor();
+            console.log(resp1)
+            //结束当前医生的问诊
+            const resp2=await jieshu(resp1.result.recordId)
+            console.log(resp2)
+            //发起新的资讯
+             const resp3 = await zixun(currentDocter.doctorId);
+             //进入聊天界面
+              navigate('/qian/zx')
+          }).catch(()=>{})
+        }
+        else 
+            {
+              const resp = await zixun(currentDocter.doctorId);
+              navigate('/qian/zx')
+            }
+      })
+      .catch(() => {});
+  };
   // 列表数据
   const { data: docterList = [] } = useRequest(
     async () => {
+      if(params.deptId ===0)return []
       const resp = await getDocterList(params);
       console.log("doctorList", resp.result);
       setCurrentDocter(resp.result[0]);
@@ -90,7 +124,9 @@ const Index: React.FC = () => {
     { refreshDeps: [params] }
   );
   // 中间 当前高亮数据
+  const navigate=useNavigate()
   const [currentDocter, setCurrentDocter] = useSetState({} as DocterState);
+ 
   return (
     <div className={style.docter}>
       {/* 头部 */}
@@ -144,6 +180,7 @@ const Index: React.FC = () => {
               <div className={style.le}>
                 <h2>{currentDocter.doctorName}</h2>
                 <span>{currentDocter.jobTitle}</span>
+                <span className={style.dian}onClick={()=>navigate(`/qian/ys/${currentDocter.doctorId}`)}>...</span>
               </div>
               <p>
                 <span>{currentDocter.inauguralHospital}</span>
@@ -151,6 +188,7 @@ const Index: React.FC = () => {
               <p>
                 <span>好评率 {currentDocter.praise}</span>
                 <span>服务患者数 {currentDocter.serverNum}</span>
+                
               </p>
             </div>
             <div className={style.right}>
@@ -158,8 +196,8 @@ const Index: React.FC = () => {
             </div>
           </dd>
           <dd>
-            <span> {currentDocter.servicePrice}H币/次</span>
-            <span>立即咨询</span>
+            <span className={style.Hbi}> {currentDocter.servicePrice}H币/次</span>
+            <span onClick={handleAsk} className={style.zi}>立即咨询</span>
           </dd>
         </dl>
       </div>

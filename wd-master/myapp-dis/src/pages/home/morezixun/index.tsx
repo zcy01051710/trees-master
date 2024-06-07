@@ -27,12 +27,10 @@ interface VirtualListProps {
 
 const Index: React.FC = () => {
   // 标题当前选中的id
-  const [titleID, setTitleID] = useState(0);
-    const savedTitleID = localStorage.getItem("titleID");
-  const { titleid } = useParams();
-  const titleIDs = parseInt(savedTitleID as string, 10);
+  const {id}=useParams()
+  const titleIDs=+id!
   console.log(titleIDs);
-  
+  const [titleID,setTitleID]=useState(0)
   const navigate = useNavigate();
   // 获取标题
   const { data: titlesData = [] } = useRequest(async () => {
@@ -45,7 +43,7 @@ const Index: React.FC = () => {
   const { data: contentData = [], run } = useRequest(
     async () => {
       const data = await getInformationListById({
-        plateId: +titleID!,
+        plateId: titleIDs,
         page: titleID,
         count: 5000,
       });

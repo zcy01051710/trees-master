@@ -91,3 +91,12 @@ export function getDocterList(params: any) {
 export function getDcotorDetail(doctorId:number){
   return getHttp({url:'health/user/inquiry/v1/findDoctorInfo',params:{doctorId:doctorId}})
 }
+//评价
+export interface getDoctorPjData{
+  doctorId:number
+  page:number
+  count:number
+}
+export function getDoctorPj(params:getDoctorPjData){
+  return getHttp({url:'/health/user/inquiry/v1/findDoctorEvaluateList',params})
+}

@@ -1,63 +1,128 @@
-.two {
+.one {
+  display: flex;
   width: 100%;
   height: 200px;
-  float: left;
 }
 
-dl {
+.imagePic {
+  width: 128px;
+  margin-top: 20px;
+  height: 160px;
+  margin-left: 20px;
+}
+
+.tu {
+  width: 158px;
+  height: 200px;
+}
+
+.zi {
+  width: 150px;
+  height: 100%;
+}
+
+.oon {
+  width: 100%;
+  height: 100%;
   display: flex;
 }
 
-dl .yi {
-  width: 180px;
-  height: 90px;
-  padding: 10px;
+.z1 {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.zi span {
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.z2 {
+  display: flex;
+}
+
+.z3 {
+  display: flex;
+}
+
+.z4 {
+  display: flex;
+  font-weight: 600;
+  color: skyblue;
+}
+
+.ooe {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.ooq {
+  width: 50px;
+  height: 50px;
+}
+
+.two {
+  width: 100%;
   margin-top: 10px;
 }
 
-dl .yi p {
-  display: flex;
-}
-
-dl .yi .er1 {
-  width: 50px;
-  height: 85px;
-  float: left;
-  margin-top: 20px;
-  margin-left: 1px;
-}
-
-dl .yi .er1 span {
-  margin-left: 20px;
+.ps {
+  margin-left: 21px;
 }
 
 .tw1 {
-  width: 150px;
-  height: 180px;
   margin-left: 20px;
-  margin-top: 10px;
 }
 
-.ye {
-  width: 100%;
+.tw3 {
+  margin-left: 20px;
 }
 
-.san {
-  width: 100%;
-}
-
-.si {
-  width: 100%;
+.gang {
+  color: skyblue;
 }
 
 .thr {
   width: 100%;
+  color: skyblue;
 }
 
-.gang {
-  margin-left: 20px;
+.th1 {
+  text-align: center;
 }
 
-.jian {
-  margin-left: 20px;
+.for {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  border: 1px solid #f4f4f4;
+  bottom: 0;
+}
+
+.fo1 {
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  color: #333;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.fo2 {
+  width: 40%;
+  height: 100%;
+}
+
+.fo2 button {
+  width: 100%;
+  height: 100%;
+  background-color: #3087EA;
+  color: #fff;
+  border: #3087EA;
+  font-size: 18px;
 }

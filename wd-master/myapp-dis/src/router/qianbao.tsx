@@ -11,6 +11,10 @@ const Jilu=lazy(()=>import('../pages/qian/jilu'))
 const Zhifu=lazy(()=>import('../pages/qian/zhifu'))
 const List=lazy(()=>import('../pages/qian/list'))
 const Ys=lazy(()=>import('../pages/qian/ys'))
+const Pin=lazy(()=>import('../pages/qian/pin'))
+const Geng=lazy(()=>import('../pages/qian/geng'))
+const Zx=lazy(()=>import('../pages/qian/zx'))
+const Jie=lazy(()=>import('../pages/qian/jie'))
 export const Qianbaorouter=[
     {
         path:'/qian',
@@ -77,10 +81,37 @@ export const Qianbaorouter=[
         }
     },
     {
-        path:'/qian/ys',
+        path:'/qian/ys/:id',
         element:<Ys/>,
         meta:{
             title:'提现'
+        }
+    },
+    {
+        path:'/qian/pin',
+        element:<Pin/>,
+        meta:{
+            title:'提现'
+        }
+    },
+    {
+        path:'/qian/geng',
+        element:<Geng/>,
+        meta:{
+            title:'提现'
+        }
+    },
+    {
+        path:'/qian/zx',
+        element:<Zx/>,
+        meta:{
+            title:'提现'
+        }
+    },{
+        path:'/qian/jie',
+        element:<Jie/>,
+        meta:{
+            title:'聊天'
         }
     }
 ]

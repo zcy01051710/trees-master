@@ -1,0 +1,86 @@
+.left,
+.right {
+  margin: 10px 0;
+  padding: 0 10px;
+  display: flex;
+}
+
+.left .avtor,
+.right .avtor {
+  flex-shrink: 0;
+}
+
+.left .concent,
+.right .concent {
+  margin-left: 10px;
+}
+
+.left .concent .text,
+.right .concent .text {
+  background-color: skyblue;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+.left .concent .text::after,
+.right .concent .text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  border-width: 10px;
+  border-style: dashed solid dashed dashed;
+  border-color: transparent skyblue transparent transparent;
+}
+
+.left .concent .img,
+.right .concent .img {
+  width: 100%;
+  height: 100%;
+}
+
+.left .concent .video,
+.right .concent .video {
+  width: 100%;
+  height: 100%;
+}
+
+.left.right,
+.right.right {
+  flex-direction: row-reverse;
+  margin: 0 10px;
+  padding: 10px 0;
+}
+
+.left.right .concent,
+.right.right .concent {
+  margin-right: 10px;
+}
+
+.left.right .concent .text,
+.right.right .concent .text {
+  background-color: skyblue;
+  padding: 10px;
+  color: white;
+  position: relative;
+}
+
+.left.right .concent .text::after,
+.right.right .concent .text::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-width: 10px;
+  border-style: dashed solid dashed dashed;
+  border-color: transparent transparent transparent skyblue;
+}
+
+.left.right .concent .img,
+.right.right .concent .img {
+  width: 100%;
+  height: 100%;
+}

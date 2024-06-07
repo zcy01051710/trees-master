@@ -54,7 +54,7 @@ export const HomeRouter = [
     }
   },
   {
-    path:'/home/morezixun/:titleID',
+    path:'/home/morezixun/:id',
     element:<MoreZixun />,
     meta:{
       title:'资讯详情'
@@ -75,7 +75,7 @@ export const HomeRouter = [
     }
   },
   {
-    path:'/ask/doctordetail/:doctorId',
+    path:'/ask/doctordetail/:id',
     element:<DoctorDetail/>,
     meta:{
         title:"医生列表详情"

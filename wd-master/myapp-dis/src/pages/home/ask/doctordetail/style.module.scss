@@ -1,8 +1,79 @@
-dl {
+.box {
+  padding: 0 10px;
+  .dl {
     display: flex;
-
-  img{
-    width: 100px;
-    height: 100px;
+    .img {
+      width: 4.66667rem;
+      height: 200px;
+      padding: 0 10px 0 0;
+    }
+    .img1 {
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .dd {
+      b {
+        font-size: 18px;
+      }
+      font-size: 16px;
+      margin-top: 10px;
+      .p {
+        margin-top: 15px;
+      }
+    }
   }
+
+  .jj {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 10px;
+    .spantwo {
+      border: 2px solid #00f;
+      height: 0.65rem;
+    }
+    .ptwo {
+      padding: 0 0 0 10px;
+    }
+  }
+  .grjj {
+    .pthr {
+      margin-top: 10px;
+    }
+  }
+  .pj {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 10px;
+    .spanthr {
+      border: 2px solid #00f;
+      height: 0.65rem;
+    }
+    .pfiv {
+      padding: 0 0 0 10px;
+    }
+  }
+}
+.pjpj {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  .headerX {
+    display: flex;
+    align-items: center;
+    .head {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+.pjlist{
+  margin-top: 10px;
 }

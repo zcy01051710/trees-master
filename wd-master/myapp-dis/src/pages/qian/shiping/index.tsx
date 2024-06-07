@@ -58,8 +58,7 @@ const Index: React.FC = () => {
               <Swiper.Item key={index}  >
                 <div>
                 <video src={item.originalUrl} controls></video>
-                <div className={style.button}>  <input
-            value={bullet}
+                <div className={style.button}>  <input value={bullet}
             onChange={({ target: { value } }: { target: HTMLInputElement }) => {
               // 弹幕内容输入事件处理
               setBullet(value);
@@ -105,7 +104,5 @@ const Index: React.FC = () => {
     </div>
   </div>
   )
-  
 };
-
 export default Index;
