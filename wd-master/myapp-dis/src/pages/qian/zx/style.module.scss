@@ -11,12 +11,13 @@
   flex-direction: column;
   header,
   footer {
-    height: 80px;
+    height: 79.98px;
     border-bottom: 1px solid #ccc;
   }
   footer{
     height: 50px;
     background-color: white;
+    border-top: 1px solid #ccc;
   }
   main {
     flex: 1;
